@@ -399,7 +399,7 @@ function App() {
           if (typeof errorData?.detail === 'string' && errorData.detail.trim()) {
             detail = errorData.detail.trim();
           }
-        } catch (_error) {
+        } catch {
           // Fall back to the generic message if the error body is not JSON.
         }
         throw new Error(detail);
@@ -471,7 +471,7 @@ function App() {
           if (typeof errorData?.detail === 'string' && errorData.detail.trim()) {
             detail = errorData.detail.trim();
           }
-        } catch (_error) {
+        } catch {
           // Fall back to the generic message if the error body is not JSON.
         }
         throw new Error(detail);

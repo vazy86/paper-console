@@ -188,7 +188,7 @@ const GeneralSettings = ({
       }
     }
 
-    const filenameMatch = headerValue.match(/filename=\"?([^\";]+)\"?/i);
+    const filenameMatch = headerValue.match(/filename="?([^";]+)"?/i);
     return filenameMatch?.[1] || '';
   };
 
