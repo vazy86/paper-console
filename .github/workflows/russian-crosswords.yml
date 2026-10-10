@@ -15,9 +15,10 @@ jobs:
           python-version: '3.13'
           cache: pip
       - run: pip install -r requirements.txt pytest
-      - run: python -m pytest testing/test_crossword.py testing/test_crossword_ru.py testing/test_printer_transport.py -q
+      - run: python -m pytest testing/test_crossword.py testing/test_crossword_ru.py testing/test_printer_transport.py testing/test_quotes_ru.py -q
       - run: python testing/render_russian_crossword.py --output testing/artifacts/debug/crossword_ru.png
+      - run: python testing/render_russian_quote.py --output testing/artifacts/debug/quotes_ru.png
       - uses: actions/upload-artifact@v4
         with:
           name: russian-crossword-preview
-          path: testing/artifacts/debug/crossword_ru.png
+          path: testing/artifacts/debug/*.png
