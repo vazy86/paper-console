@@ -1510,20 +1510,26 @@ class PrinterDriver:
 
     def _sanitize_text(self, text: str) -> str:
         """
-        Convert text to pure ASCII to prevent Chinese character issues.
-        Replaces common Unicode chars with ASCII equivalents.
+        Preserve Russian text for bitmap rendering and legacy ASCII substitutions.
+        Text is rasterized on the host, not sent as an ESC/POS character stream.
         """
         # Step 1: Apply known character replacements
         text = text.translate(self.CHAR_REPLACEMENTS)
 
-        # Step 2: Normalize Unicode (decompose accented chars like é -> e + accent)
-        text = unicodedata.normalize("NFKD", text)
+        # Compose first so decomposed Й/Ё are preserved. Normalize other
+        # characters separately to retain the existing Latin accent handling.
+        text = unicodedata.normalize("NFC", text)
+        text = ''.join(
+            char if ('А' <= char <= 'я' or char in 'Ёё')
+            else unicodedata.normalize('NFKD', char)
+            for char in text
+        )
 
-        # Step 3: Keep only printable ASCII (0x20-0x7E) plus newline/tab
+        # Keep printable ASCII, Russian letters and whitespace.
         result = []
         for char in text:
             code = ord(char)
-            if 0x20 <= code <= 0x7E:  # Printable ASCII
+            if 0x20 <= code <= 0x7E or 'А' <= char <= 'я' or char in 'Ёё':
                 result.append(char)
             elif char in "\n\r\t":  # Whitespace
                 result.append(char)

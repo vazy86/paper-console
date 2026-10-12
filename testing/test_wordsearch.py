@@ -223,3 +223,59 @@ def test_wordsearch_num_words_is_clamped_to_supported_range():
     assert _clamp_num_words(999) == MAX_NUM_WORDS
     assert _clamp_num_words(0) == MIN_NUM_WORDS
     assert _clamp_num_words("not a number") == 15
+
+
+def test_russian_wordsearch_prints_cyrillic_words_and_grid(monkeypatch):
+    from app.modules import wordsearch
+
+    captured = {}
+    original_generate = wordsearch.WordSearchGenerator.generate
+
+    def capture_generate(self, pool, count, directions):
+        original_generate(self, pool, count, directions)
+        captured['grid'] = self.grid
+        captured['placed'] = self.words_placed
+
+    monkeypatch.setattr(wordsearch.WordSearchGenerator, 'generate', capture_generate)
+    printer = MagicMock()
+    printer.PRINTER_WIDTH_DOTS = 384
+
+    execute_wordsearch(printer, {'language': 'ru', 'num_words': 5})
+
+    assert printer.print_header.call_args.args[0] == 'ПОИСК СЛОВ'
+    printer.print_subheader.assert_called_with('Сложность: Легко')
+    assert printer.print_image.call_args.args[0].width <= 384
+    assert len(captured['placed']) == 5
+    assert all('А' <= c <= 'Я' for row in captured['grid'] for c in row)
+    for placement in captured['placed']:
+        x, y = placement['start_x'], placement['start_y']
+        actual = ''.join(captured['grid'][y + i * placement['dy']][x + i * placement['dx']]
+                         for i in range(len(placement['word'])))
+        assert actual == placement['word']
+    printed_words = printer.print_body.call_args.args[0]
+    assert all(p['word'] in printed_words for p in captured['placed'])
+
+
+def test_russian_filler_uses_cyrillic_only():
+    from app.modules.wordsearch import RU_LETTERS
+
+    gen = WordSearchGenerator(6, 6, alphabet=RU_LETTERS)
+    gen.generate(['ЁЖИК'], 0, [DIR_RIGHT])
+    assert all(c in RU_LETTERS for row in gen.grid for c in row)
+
+
+def test_russian_wordsearch_normalizes_yo_from_dictionary(tmp_path, monkeypatch):
+    from app.modules import wordsearch
+
+    data_dir = tmp_path / 'app' / 'data'
+    data_dir.mkdir(parents=True)
+    (data_dir / 'crossword_words_ru.csv').write_text(
+        'word,hint,difficulty\nЁЖИК,Зверёк,easy\n', encoding='utf-8'
+    )
+    monkeypatch.setattr(wordsearch, '__file__', str(tmp_path / 'app' / 'modules' / 'wordsearch.py'))
+    printer = MagicMock()
+    printer.PRINTER_WIDTH_DOTS = 384
+
+    execute_wordsearch(printer, {'language': 'ru', 'num_words': 5})
+
+    assert printer.print_body.call_args.args[0] == 'ЕЖИК'

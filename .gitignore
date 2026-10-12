@@ -96,3 +96,6 @@ deploy.sh
 
 # Deployment configuration (contains Pi connection details)
 .deploy_config
+
+# Word of the Day rotation state (runtime only)
+app/data/wotd_ru_state.json

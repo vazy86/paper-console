@@ -176,6 +176,7 @@ class CapturePrinter(SerialPrinterDriver):
     def _send_bitmap(self, img):  # type: ignore[override]
         if img is not None:
             self.captured_bitmaps.append(img.copy())
+        return {"cancelled": False, "bytes_sent": 0}
 
     def blip(self):
         # Skip tactile feedback in offline render mode.

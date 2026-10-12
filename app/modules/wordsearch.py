@@ -13,6 +13,15 @@ logger = logging.getLogger(__name__)
 DEFAULT_NUM_WORDS = 15
 MIN_NUM_WORDS = 5
 MAX_NUM_WORDS = 24
+RU_LETTERS = "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЫЭЮЯ"
+TEXT = {
+    "en": {"title": "WORD SEARCH", "level": "Level", "Easy": "Easy", "Hard": "Hard",
+           "find": "FIND THESE WORDS:", "load_error": "Error: Could not load word list.",
+           "empty": "Error: Word list is empty."},
+    "ru": {"title": "ПОИСК СЛОВ", "level": "Сложность", "Easy": "Легко", "Hard": "Сложно",
+           "find": "НАЙДИТЕ СЛОВА:", "load_error": "Ошибка загрузки списка слов.",
+           "empty": "Список слов пуст."},
+}
 
 
 def _clamp_num_words(value: Any) -> int:
@@ -40,9 +49,10 @@ class WordSearchGenerator:
     """
     Generator for word search puzzles.
     """
-    def __init__(self, width: int, height: int):
+    def __init__(self, width: int, height: int, alphabet: str = string.ascii_uppercase):
         self.width = width
         self.height = height
+        self.alphabet = alphabet
         self.grid = [['' for _ in range(width)] for _ in range(height)]
         self.words_placed = []
 
@@ -226,7 +236,7 @@ class WordSearchGenerator:
         for y in range(self.height):
             for x in range(self.width):
                 if self.grid[y][x] == "":
-                    self.grid[y][x] = random.choice(string.ascii_uppercase)
+                    self.grid[y][x] = random.choice(self.alphabet)
 
 def render_wordsearch_grid(grid: List[List[str]], cell_size: int, font_path: str = None) -> Image.Image:
     """Renders the word search grid as a 1-bit bitmap."""
@@ -279,6 +289,13 @@ def render_wordsearch_grid(grid: List[List[str]], cell_size: int, font_path: str
     config_schema={
         "type": "object",
         "properties": {
+            "language": {
+                "type": "string",
+                "title": "Language / Язык",
+                "description": "en — English; ru — Русский (Ё = Е)",
+                "enum": ["en", "ru"],
+                "default": "en"
+            },
             "num_words": {
                 "type": "integer",
                 "title": "Number of Words",
@@ -299,10 +316,17 @@ def execute_wordsearch(printer, config: Dict[str, Any], module_name: str = None)
     """Word search module implementation."""
     num_words = _clamp_num_words(config.get("num_words", DEFAULT_NUM_WORDS))
     difficulty = config.get("difficulty", "Easy")
+    if difficulty not in ("Easy", "Hard"):
+        difficulty = "Easy"
+    language = config.get("language", "en")
+    if language not in TEXT:
+        language = "en"
+    text = TEXT[language]
     
     # 1. Load word list from the shared crossword source
     app_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    csv_path = os.path.join(app_dir, "data", "crossword_words.csv")
+    csv_name = "crossword_words_ru.csv" if language == "ru" else "crossword_words.csv"
+    csv_path = os.path.join(app_dir, "data", csv_name)
     
     word_pool = []
     try:
@@ -311,19 +335,22 @@ def execute_wordsearch(printer, config: Dict[str, Any], module_name: str = None)
                 reader = csv.DictReader(f)
                 for row in reader:
                     w = row['word'].strip().upper()
+                    if language == "ru":
+                        w = w.replace("Ё", "Е")
                     # Include words that fit within the maximum possible grid dimension (20)
-                    if w and 3 <= len(w) <= 20 and w.isalpha():
+                    valid_letters = all(c in RU_LETTERS for c in w) if language == "ru" else w.isascii() and w.isalpha()
+                    if 3 <= len(w) <= 20 and valid_letters:
                         word_pool.append(w)
 
     except Exception as e:
         logger.error(f"Failed to load word search words: {e}")
-        printer.print_header(module_name or "WORD SEARCH", icon="magnifying-glass")
-        printer.print_body("Error: Could not load word list.")
+        printer.print_header(module_name or text["title"], icon="magnifying-glass")
+        printer.print_body(text["load_error"])
         return
 
     if not word_pool:
-        printer.print_header(module_name or "WORD SEARCH", icon="magnifying-glass")
-        printer.print_body("Error: Word list is empty.")
+        printer.print_header(module_name or text["title"], icon="magnifying-glass")
+        printer.print_body(text["empty"])
         return
 
     # 2. Determine settings based on difficulty (constant width 12, varying height)
@@ -336,15 +363,17 @@ def execute_wordsearch(printer, config: Dict[str, Any], module_name: str = None)
         directions = DIRECTIONS_HARD
 
     # 3. Generate Puzzle
-    gen = WordSearchGenerator(grid_width, grid_height)
+    gen = WordSearchGenerator(grid_width, grid_height,
+                              alphabet=RU_LETTERS if language == "ru" else string.ascii_uppercase)
     # Words must fit within width (12) or the maximum possible growth height (approx 20)
     valid_pool = [w for w in word_pool if len(w) <= 20]
     gen.generate(valid_pool, num_words, directions)
     
     # 4. Print Layout
-    printer.print_header(module_name or "WORD SEARCH", icon="magnifying-glass")
-    printer.print_caption(format_print_datetime())
-    printer.print_subheader(f"Level: {difficulty}")
+    printer.print_header(module_name or text["title"], icon="magnifying-glass")
+    printer.print_caption(format_print_datetime(time_format="24h", date_format="%d.%m.%Y")
+                          if language == "ru" else format_print_datetime())
+    printer.print_subheader(f"{text['level']}: {text[difficulty]}")
     printer.feed(1)
 
     # Calculate cell size to fill width (384 dots)
@@ -362,7 +391,7 @@ def execute_wordsearch(printer, config: Dict[str, Any], module_name: str = None)
     printer.feed(1)
 
     # 5. Word List
-    printer.print_bold("FIND THESE WORDS:")
+    printer.print_bold(text["find"])
     # Sort for easier reading
     placed_words = sorted([p['word'] for p in gen.words_placed])
     printer.print_body(", ".join(placed_words))

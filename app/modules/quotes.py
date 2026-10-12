@@ -7,68 +7,76 @@ from app.module_registry import register_module
 
 
 # Resolve path relative to the app package directory.
-def _get_quotes_db_path() -> Path:
+def _get_quotes_db_path(language: str = "en") -> Path:
     """Get the quotes database path relative to the app package."""
-    return Path(__file__).resolve().parent.parent / "data" / "quotes.json"
+    filename = "quotes_ru.json" if language == "ru" else "quotes.json"
+    return Path(__file__).resolve().parent.parent / "data" / filename
 
 
 LOCAL_DB_PATH = _get_quotes_db_path()
 
 
-def get_random_quote() -> Dict[str, str]:
+def get_random_quote(language: str = "en") -> Dict[str, str]:
     """Reads a random quote from the local database."""
     try:
-        quotes_path = _get_quotes_db_path()
+        quotes_path = _get_quotes_db_path(language)
         with open(quotes_path, "r", encoding="utf-8") as f:
             quotes = json.load(f)
             if not quotes:
-                return {"quoteText": "No quotes found.", "quoteAuthor": "System"}
+                return {"quoteText": "Цитаты не найдены." if language == "ru" else "No quotes found.", "quoteAuthor": "Система" if language == "ru" else "System"}
             if not isinstance(quotes, list):
                 return {
-                    "quoteText": "Invalid quotes database format.",
-                    "quoteAuthor": "System",
+                    "quoteText": "Неверный формат базы цитат." if language == "ru" else "Invalid quotes database format.",
+                    "quoteAuthor": "Система" if language == "ru" else "System",
                 }
             return random.choice(quotes)
     except FileNotFoundError:
         return {
-            "quoteText": "Offline quotes database is missing.",
-            "quoteAuthor": "System",
+            "quoteText": "Локальная база цитат отсутствует." if language == "ru" else "Offline quotes database is missing.",
+            "quoteAuthor": "Система" if language == "ru" else "System",
         }
     except json.JSONDecodeError as e:
         return {
-            "quoteText": f"Invalid JSON in quotes database: {e}",
-            "quoteAuthor": "System",
+            "quoteText": "Ошибка JSON в базе цитат." if language == "ru" else f"Invalid JSON in quotes database: {e}",
+            "quoteAuthor": "Система" if language == "ru" else "System",
         }
     except Exception as e:
         return {
-            "quoteText": f"Error reading quotes database: {str(e)}",
-            "quoteAuthor": "System",
+            "quoteText": "Не удалось прочитать базу цитат." if language == "ru" else f"Error reading quotes database: {str(e)}",
+            "quoteAuthor": "Система" if language == "ru" else "System",
         }
 
 
 @register_module(
     type_id="quotes",
     label="Daily Quote",
-    description="Prints a random inspirational quote from offline database (5000+ quotes)",
+    description="Prints a random offline quote in English or Russian",
     icon="quotes",
     offline=True,
     category="content",
     config_schema={
         "type": "object",
-        "properties": {},
+        "properties": {
+            "language": {"type": "string", "title": "Language / Язык",
+                         "enum": ["en", "ru"], "default": "en"},
+        },
     },
 )
 def format_quotes_receipt(
     printer, config: Dict[str, Any] = None, module_name: str = None
 ):
     """Prints a random quote."""
-    quote = get_random_quote()
+    language = (config or {}).get("language", "en")
+    quote = get_random_quote(language)
     text = quote.get("quoteText", "")
     author = quote.get("quoteAuthor", "Unknown")
 
     # Header
-    printer.print_header(module_name or "QUOTE", icon="quotes")
-    printer.print_caption(format_print_datetime())
+    printer.print_header(module_name or ("ЦИТАТА ДНЯ" if language == "ru" else "QUOTE"), icon="quotes")
+    printer.print_caption(
+        format_print_datetime(time_format="24h", date_format="%d.%m.%Y")
+        if language == "ru" else format_print_datetime()
+    )
     printer.print_line()
 
     # Quote body in italics-style (using medium weight for emphasis)

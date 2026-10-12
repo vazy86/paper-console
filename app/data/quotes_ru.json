@@ -1,0 +1,878 @@
+[
+  {
+    "quoteText": "Все, что человеческий разум способен понять и во что он способен поверить, достижимо.",
+    "quoteAuthor": "Наполеон Хилл",
+    "sourceNumber": 1,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Сложнее всего начать действовать, все остальное зависит только от упорства.",
+    "quoteAuthor": "Амелия Эрхарт",
+    "sourceNumber": 2,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Начинать всегда стоит с того, что сеет сомнения.",
+    "quoteAuthor": "Борис Стругацкий",
+    "sourceNumber": 3,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Возможности не приходят сами — вы создаете их.",
+    "quoteAuthor": "Крис Гроссер",
+    "sourceNumber": 4,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Неудача — это возможность начать заново, но уже более мудро.",
+    "quoteAuthor": "Генри Форд",
+    "sourceNumber": 5,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Всегда смотрите на солнце — и тени будут позади вас.",
+    "quoteAuthor": "Уолт Уитмен",
+    "sourceNumber": 6,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Если я полон решимости, я преодолею любое препятствие.",
+    "quoteAuthor": "Абай Кунанбаев",
+    "sourceNumber": 7,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Обстоятельства часто можно изменить, изменив свое отношение к ним.",
+    "quoteAuthor": "Элеонора Рузвельт",
+    "sourceNumber": 8,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Вдохновение приходит только во время работы.",
+    "quoteAuthor": "Габриэль Гарсиа Маркес",
+    "sourceNumber": 9,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Трудные времена не создают героев. Именно в трудные времена раскрывается герой внутри нас.",
+    "quoteAuthor": "",
+    "sourceNumber": 10,
+    "attributionStatus": "not_provided"
+  },
+  {
+    "quoteText": "Все, что раздражает в других, может вести к пониманию себя.",
+    "quoteAuthor": "Карл Густав Юнг",
+    "sourceNumber": 11,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Если проблему можно решить, не стоит о ней беспокоиться.",
+    "quoteAuthor": "Далай-лама XIV",
+    "sourceNumber": 12,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Счастье — это не нечто готовое. Счастье зависит только от ваших действий.",
+    "quoteAuthor": "Далай-лама XIV",
+    "sourceNumber": 13,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Сила не зависит от физических возможностей. Ее источник — неукротимая воля.",
+    "quoteAuthor": "Махатма Ганди",
+    "sourceNumber": 14,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Если что-то вообще стоит пробовать, это стоит попробовать не меньше 10 раз.",
+    "quoteAuthor": "Артур Гордон Линклеттер",
+    "sourceNumber": 16,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Если вам не нравится дорога, по которой вы идете, начните прокладывать другую.",
+    "quoteAuthor": "Долли Партон",
+    "sourceNumber": 17,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Дойдя до конца, люди смеются над страхами, мучившими их вначале.",
+    "quoteAuthor": "Пауло Коэльо",
+    "sourceNumber": 18,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Я твердо верю в удачу. И я заметил: чем больше я работаю, тем больше она мне улыбается.",
+    "quoteAuthor": "Томас Джефферсон",
+    "sourceNumber": 19,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Лучший способ предсказать ваше будущее — создать его",
+    "quoteAuthor": "",
+    "sourceNumber": 20,
+    "attributionStatus": "not_provided"
+  },
+  {
+    "quoteText": "Постарайтесь получить то, что любите, иначе придется полюбить то, что получили.",
+    "quoteAuthor": "Джордж Бернард Шоу",
+    "sourceNumber": 21,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Не расставайтесь со своими иллюзиями. Когда их не станет, может быть, вы и продолжите существовать, но перестанете жить.",
+    "quoteAuthor": "Марк Твен",
+    "sourceNumber": 22,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Если вы не знаете, куда идете, любая дорога приведет вас туда.",
+    "quoteAuthor": "Джордж Харрисон",
+    "sourceNumber": 23,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Только те, кто рискуют зайти слишком далеко, способны выяснить, как далеко они могут зайти.",
+    "quoteAuthor": "Томас Стернз Элиот",
+    "sourceNumber": 24,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Мотивация — это огонь изнутри. Если кто-то попытается зажечь этот огонь под вами, скорее всего, он очень быстро сгорит.",
+    "quoteAuthor": "",
+    "sourceNumber": 25,
+    "attributionStatus": "not_provided"
+  },
+  {
+    "quoteText": "Живите в соответствии со своим воображением, а не своим прошлым.",
+    "quoteAuthor": "Стивен Кови",
+    "sourceNumber": 26,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Мечтайте по-крупному и осмельтесь потерпеть неудачу.",
+    "quoteAuthor": "Норман Воган",
+    "sourceNumber": 27,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Дайте человеку цель, ради которой стоит жить, и он сможет выжить в любой ситуации.",
+    "quoteAuthor": "Иоганн Вольфганг Гёте",
+    "sourceNumber": 28,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Лидеры не рождаются и не делаются кем-либо — они делают себя сами.",
+    "quoteAuthor": "Стивен Кови",
+    "sourceNumber": 29,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Через 20 лет вы будете больше разочарованы теми вещами, которые вы не делали, чем теми, которые вы сделали. Так отчальте от тихой пристани. Почувствуйте попутный ветер в вашем парусе. Двигайтесь вперед, действуйте, открывайте!",
+    "quoteAuthor": "Г. Джексон Браун",
+    "sourceNumber": 30,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Делайте, что можете, с тем, что имеете, там, где вы есть.",
+    "quoteAuthor": "Теодор Рузвельт",
+    "sourceNumber": 31,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Не ждите; тот самый момент не наступает никогда.",
+    "quoteAuthor": "Наполеон Хилл",
+    "sourceNumber": 32,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Если вы хотите изменить мир, начните с себя.",
+    "quoteAuthor": "Махатма Ганди",
+    "sourceNumber": 33,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Не позволяйте вчерашнему дню занимать слишком много места в сегодняшнем.",
+    "quoteAuthor": "Уилл Роджерс",
+    "sourceNumber": 34,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Измените свою жизнь сегодня. Не рассчитывайте на будущее, действуйте сейчас, не откладывая.",
+    "quoteAuthor": "Симона де Бовуар",
+    "sourceNumber": 35,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Единственным пределом наших завтрашних свершений станут наши сегодняшние сомнения.",
+    "quoteAuthor": "Франклин Д. Рузвельт",
+    "sourceNumber": 36,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Делай сегодня то, что другие не хотят — завтра будешь жить так, как другие не могут.",
+    "quoteAuthor": "Джаред Лето",
+    "sourceNumber": 37,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Кто-то отдыхает сегодня в тени, потому что кто-то посадил дерево много лет назад.",
+    "quoteAuthor": "Уоррен Баффетт",
+    "sourceNumber": 38,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Никто не может вернуться назад и начать все сначала, но любой человек может начать сегодня и создать новое окончание.",
+    "quoteAuthor": "Сэмюэл Джонсон",
+    "sourceNumber": 39,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Не смотри на часы; делай то, что они делают. Продолжай идти вперед",
+    "quoteAuthor": "",
+    "sourceNumber": 40,
+    "attributionStatus": "not_provided"
+  },
+  {
+    "quoteText": "Храбрость не всегда кричит. Иногда храбрость говорит тихим голосом в конце дня: Завтра я попытаюсь еще раз.",
+    "quoteAuthor": "Мэри Энн Редмачер",
+    "sourceNumber": 41,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Если вы хотите иметь то, что никогда не имели, вам придется делать то, что никогда не делали.",
+    "quoteAuthor": "Коко Шанель",
+    "sourceNumber": 42,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Каждую ночь, прежде чем уснуть, представляйте себе свой идеальный завтрашний день. Вы увидите, во многом так и будет.",
+    "quoteAuthor": "Брайан Трейси",
+    "sourceNumber": 43,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Каждый день не может быть хорошим, но есть что-то хорошее в каждом дне.",
+    "quoteAuthor": "Элис Морз Эрл",
+    "sourceNumber": 44,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Большинство людей упускают свои возможности, потому что она бывает одета в комбинезон и с виду напоминает работу.",
+    "quoteAuthor": "Томас Эдисон",
+    "sourceNumber": 45,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Вы хотите знать, кто вы? Не спрашивайте. Действуйте! Действие будет описывать и определять вас.",
+    "quoteAuthor": "Томас Джефферсон",
+    "sourceNumber": 46,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Вы должны делать то, что, как вам кажется, вы не в состоянии сделать.",
+    "quoteAuthor": "Элеонора Рузвельт",
+    "sourceNumber": 47,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Даже если вы находитесь на правильном пути, вас собьют, если вы просто сидите там.",
+    "quoteAuthor": "Уилл Роджерс",
+    "sourceNumber": 48,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Действуйте прямо сейчас. Будущего никому не обещали.",
+    "quoteAuthor": "Уэйн Дайер",
+    "sourceNumber": 49,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Главное, не сходите с пути и не сдавайтесь. Там, где вы чувствуете любовь и вдохновение, я думаю, нельзя ошибиться",
+    "quoteAuthor": "",
+    "sourceNumber": 50,
+    "attributionStatus": "not_provided"
+  },
+  {
+    "quoteText": "В конце концов, мы можем вынести гораздо больше, чем мы думаем.",
+    "quoteAuthor": "Фрида Кало",
+    "sourceNumber": 51,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Действия не всегда приносят счастье, но не бывает счастья без действия.",
+    "quoteAuthor": "Бенджамин Дизраэли",
+    "sourceNumber": 52,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Если Вы работаете над поставленными целями, то эти цели будут работать на вас.",
+    "quoteAuthor": "Джим Рон",
+    "sourceNumber": 53,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Когда необходимо сделать выбор, а вы его не делаете, — это тоже выбор.",
+    "quoteAuthor": "Уильям Джеймс",
+    "sourceNumber": 54,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Мы должны использовать время мудро и помнить: правое дело можно начать в любую минуту.",
+    "quoteAuthor": "Нельсон Мандела",
+    "sourceNumber": 55,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Стремитесь не к успеху, а к ценностям, которые он дает.",
+    "quoteAuthor": "Альберт Эйнштейн",
+    "sourceNumber": 56,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Логика может привести вас от пункта А к пункту Б, а воображение — куда угодно.",
+    "quoteAuthor": "Альберт Эйнштейн",
+    "sourceNumber": 57,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Ваше время ограничено, не тратьте его, живя чужой жизнью.",
+    "quoteAuthor": "Стив Джобс",
+    "sourceNumber": 58,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Неважно, как медленно вы идете, до тех пор, пока вы не остановитесь.",
+    "quoteAuthor": "Конфуций",
+    "sourceNumber": 59,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Путь в тысячу ли начинается с первого шага.",
+    "quoteAuthor": "Лао-цзы",
+    "sourceNumber": 60,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Трудности укрепляют ум, как труд укрепляет тело.",
+    "quoteAuthor": "Сенека",
+    "sourceNumber": 61,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Вы не можете менять направление ветра, но всегда можете поднять паруса, чтобы достичь своей цели.",
+    "quoteAuthor": "Оскар Уайльд",
+    "sourceNumber": 62,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Верный способ начать что-то — бросить говорить и делать.",
+    "quoteAuthor": "Уолт Дисней",
+    "sourceNumber": 63,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Пройденный путь и есть награда.",
+    "quoteAuthor": "Стив Джобс",
+    "sourceNumber": 64,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Если вы можете мечтать, то можете и воплотить свои мечты в жизнь",
+    "quoteAuthor": "",
+    "sourceNumber": 65,
+    "attributionStatus": "not_provided"
+  },
+  {
+    "quoteText": "Умение жить — самая редкая вещь в мире. Большинство людей просто существует.",
+    "quoteAuthor": "Оскар Уайльд",
+    "sourceNumber": 66,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "То, что мы любим, говорит нам о том, кто мы есть.",
+    "quoteAuthor": "Фома Аквинский",
+    "sourceNumber": 67,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Когда вам покажется, что цель недостижима, не изменяйте цель — изменяйте свой план действий.",
+    "quoteAuthor": "Конфуций",
+    "sourceNumber": 68,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Будьте собой. Все остальные роли уже заняты.",
+    "quoteAuthor": "Оскар Уайльд",
+    "sourceNumber": 69,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Лучше работать без определенной цели, чем ничего не делать.",
+    "quoteAuthor": "Сократ",
+    "sourceNumber": 70,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Просыпаясь утром, спроси себя: Что я должен сделать? Вечером, прежде чем заснуть: Что я сделал?",
+    "quoteAuthor": "Пифагор",
+    "sourceNumber": 71,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Помните, что даже самый тяжелый час в вашей жизни — всего 60 минут.",
+    "quoteAuthor": "Софокл",
+    "sourceNumber": 72,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Хорошее время не с неба падает, а мы его делаем, оно заключается в сердце нашем.",
+    "quoteAuthor": "Федор Достоевский",
+    "sourceNumber": 73,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Секрет перемен состоит в том, чтобы сосредоточиться на создании нового, а не на борьбе со старым.",
+    "quoteAuthor": "Сократ",
+    "sourceNumber": 74,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Если вы решили действовать, закройте двери для сомнений",
+    "quoteAuthor": "",
+    "sourceNumber": 75,
+    "attributionStatus": "not_provided"
+  },
+  {
+    "quoteText": "Выживает не самый сильный из видов и не самый умный, а тот, кто лучше других реагирует на изменения.",
+    "quoteAuthor": "Леон Меггинсон",
+    "sourceNumber": 76,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Человек всю жизнь не живет, а сочиняет себя, самосочиняется.",
+    "quoteAuthor": "Фёдор Достоевский",
+    "sourceNumber": 77,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Будь честен с самим собой и с людьми, всегда делай все вовремя, никогда не сдавайся, иди к своим целям, даже если все плохо.",
+    "quoteAuthor": "Стив Джобс",
+    "sourceNumber": 78,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Существует только один путь к счастью — перестать беспокоиться о вещах, которые не подвластны нашей воле.",
+    "quoteAuthor": "Эпиктет",
+    "sourceNumber": 79,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Большинство людей в действительности не хотят свободы, потому что она предполагает ответственность, а ответственность большинство людей страшит.",
+    "quoteAuthor": "Зигмунд Фрейд",
+    "sourceNumber": 80,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Действие даже самого крохотного существа приводит к изменениям во всей вселенной.",
+    "quoteAuthor": "Никола Тесла",
+    "sourceNumber": 81,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Победа — это еще не все, все — это постоянное желание побеждать.",
+    "quoteAuthor": "Винс Ломбарди",
+    "sourceNumber": 82,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Не будучи в силах свершить великое, свершай малое великим способом.",
+    "quoteAuthor": "Наполеон Хилл",
+    "sourceNumber": 83,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Предрассудки — это бремя, которое путает прошлое, ставит под угрозу будущее и делает настоящее недоступными.",
+    "quoteAuthor": "Майя Анжелу",
+    "sourceNumber": 84,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Грамм собственного опыта стоит дороже тонны чужих наставлений.",
+    "quoteAuthor": "Махатма Ганди",
+    "sourceNumber": 85,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Не стоит быть тенью в чужом фонаре, когда можно сиять своим собственным светом.",
+    "quoteAuthor": "Алексей Христинин",
+    "sourceNumber": 86,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Вы не сможете пересечь море, просто стоя и вглядываясь в воду. Не тратьте время на напрасные желания.",
+    "quoteAuthor": "Рабиндранат Тагор",
+    "sourceNumber": 87,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Обязательно дружите с теми, кто лучше вас. Будете мучиться, но расти.",
+    "quoteAuthor": "Вера Полозкова",
+    "sourceNumber": 88,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Планы — это только набор намерений. Если они тут же не перерастают в конкретные действия, направленные на достижение ваших целей. Но важно помнить, что каждая минута, потраченная на планирование, будет потом экономить огромное количество времени и денег.",
+    "quoteAuthor": "Дмитрий Брейтенбихер",
+    "sourceNumber": 89,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Свобода ничего не стоит, если она не включает в себя свободу ошибаться",
+    "quoteAuthor": "",
+    "sourceNumber": 90,
+    "attributionStatus": "not_provided"
+  },
+  {
+    "quoteText": "Не бойтесь отказываться от хорошего в пользу отличного.",
+    "quoteAuthor": "Джон Рокфеллер",
+    "sourceNumber": 91,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Мы должны использовать время, как инструмент, а не как диван.",
+    "quoteAuthor": "Джон Фицджеральд Кеннеди",
+    "sourceNumber": 92,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Мы свободны выбирать наши действия, но мы не можем выбирать последствия этих действий.",
+    "quoteAuthor": "Стивен Кови",
+    "sourceNumber": 93,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Лучше потерпеть неудачу в оригинальности, чем преуспеть в подражании.",
+    "quoteAuthor": "Герман Мелвилл",
+    "sourceNumber": 94,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Мы можем столкнуться с множеством поражений, но не должны быть побежденными.",
+    "quoteAuthor": "Майя Анжелу",
+    "sourceNumber": 95,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Большую работу поручают тому, кто показывает способность перерасти маленькую.",
+    "quoteAuthor": "Теодор Рузвельт",
+    "sourceNumber": 96,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Не отступай перед трудностями. Смотри им прямо в лицо. Смотри, пока не одолеешь их.",
+    "quoteAuthor": "Чарльз Диккенс",
+    "sourceNumber": 98,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Чем больше трудностей мы преодолеваем, тем легче принимаем свое будущее.",
+    "quoteAuthor": "Майкл Хайятт",
+    "sourceNumber": 99,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "В любой момент у нас есть два варианта: сделать шаг вперед к росту или вернуться в безопасное место",
+    "quoteAuthor": "",
+    "sourceNumber": 100,
+    "attributionStatus": "not_provided"
+  },
+  {
+    "quoteText": "Не слушайте тех, кто велит играть на скрипке, когда вы отлично играете на барабанах.",
+    "quoteAuthor": "Жозе Моуринью",
+    "sourceNumber": 101,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Нельзя открыть новую землю, не согласившись сначала и надолго потерять из виду любой берег.",
+    "quoteAuthor": "Андре Жид",
+    "sourceNumber": 102,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Вы не должны быть великими, чтобы начать, но вы должны начать, чтобы быть великими.",
+    "quoteAuthor": "Зиг Зиглар",
+    "sourceNumber": 103,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Все то, что лежит позади нас и что лежит перед нами, — мелочи по сравнению с тем, что лежит внутри нас.",
+    "quoteAuthor": "Ральф Уолдо Эмерсон",
+    "sourceNumber": 104,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Только через осуществление великих целей человек обнаруживает в себе великий характер, делающий его маяком для других.",
+    "quoteAuthor": "Георг Гегель",
+    "sourceNumber": 105,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Величайшая польза, которую можно извлечь из жизни, — потратить жизнь на дело, которое переживёт нас.",
+    "quoteAuthor": "Уильям Джеймс",
+    "sourceNumber": 106,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Когда человеку кажется, что всё идёт наперекосяк, в его жизнь пытается войти нечто чудесное.",
+    "quoteAuthor": "Далай-лама XIV",
+    "sourceNumber": 107,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Вы не можете пройти ни одного дня, не оказав влияния на мир вокруг вас. То, что вы делаете, имеет значение, и вы должны решить, какую значимость будут иметь ваши действия.",
+    "quoteAuthor": "Джейн Гудолл",
+    "sourceNumber": 108,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Вы должны верить в себя даже тогда, когда в вас сомневается весь мир.",
+    "quoteAuthor": "Шри Чинмой",
+    "sourceNumber": 109,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Отдавай миру лучшее, что у тебя есть, и лучшее устремится обратно к тебе.",
+    "quoteAuthor": "Шри Чинмой",
+    "sourceNumber": 110,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Возьмите на себя ответственность за свою жизнь. Знайте, что только вы можете привести себя туда, куда вы хотите, и никто больше",
+    "quoteAuthor": "",
+    "sourceNumber": 111,
+    "attributionStatus": "not_provided"
+  },
+  {
+    "quoteText": "Жизнь — это 10 процентов того, что с вами происходит, и 90 процентов того, как вы на это реагируете.",
+    "quoteAuthor": "Лу Хольц",
+    "sourceNumber": 112,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Только я могу изменить свою жизнь. Никто не может сделать это за меня.",
+    "quoteAuthor": "Кэрол Бернетт",
+    "sourceNumber": 113,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Смысл жизни не в том, чтобы ждать, когда закончится гроза, а в том, чтобы учиться танцевать под дождем.",
+    "quoteAuthor": "Вивиан Грин",
+    "sourceNumber": 114,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Мы находим в жизни только то, что сами вкладываем в нее.",
+    "quoteAuthor": "Ральф Уолдо Эмерсон",
+    "sourceNumber": 115,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "То, что вы делаете, имеет смысл, и вы должны решить, каким смыслом наполнить жизнь.",
+    "quoteAuthor": "Джейн Гудолл",
+    "sourceNumber": 116,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Жизнь — это путешествие, а не пункт назначения.",
+    "quoteAuthor": "Ральф Уолдо Эмерсон",
+    "sourceNumber": 117,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Жизнь состоит не в том, чтобы найти себя. Жизнь состоит в том, чтобы создать себя.",
+    "quoteAuthor": "Джордж Бернард Шоу",
+    "sourceNumber": 118,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Ни разу не упасть — не самая большая заслуга в жизни. Главное — каждый раз подниматься.",
+    "quoteAuthor": "Нельсон Мандела",
+    "sourceNumber": 119,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Стань сам той переменой, которую хочешь увидеть в мире",
+    "quoteAuthor": "",
+    "sourceNumber": 120,
+    "attributionStatus": "not_provided"
+  },
+  {
+    "quoteText": "Не пытайтесь остановить то, что неизбежно. В конце концов, всё в жизни становится на свои места, потому что всё циклично.",
+    "quoteAuthor": "Иван Пьянов",
+    "sourceNumber": 121,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Лучшие и прекраснейшие вещи в мире нельзя увидеть, к ним нельзя даже прикоснуться. Их надо чувствовать сердцем.",
+    "quoteAuthor": "Хелен Адамс Келлер",
+    "sourceNumber": 122,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Вчера я был умным, хотел изменить мир. Сегодня я мудрый, и поэтому меняю себя.",
+    "quoteAuthor": "Шри Чинмой",
+    "sourceNumber": 123,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Победы не делают вас сильнее. Сила формируется в борьбе. Когда, преодолевая трудности, вы решаете не сдаваться — тогда вы проявляете силу.",
+    "quoteAuthor": "Арнольд Шварценеггер",
+    "sourceNumber": 124,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Каждый человек на земле, чем бы он ни занимался, играет главную роль в истории мира. И обычно даже не знает об этом.",
+    "quoteAuthor": "Пауло Коэльо",
+    "sourceNumber": 125,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Никогда не опускайте голову. Держите её высоко. Смотрите миру прямо в глаза.",
+    "quoteAuthor": "Хелен Адамс Келлер",
+    "sourceNumber": 126,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Страх побеждает больше людей, чем любая другая вещь в мире.",
+    "quoteAuthor": "Ральф Уолдо Эмерсон",
+    "sourceNumber": 127,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "За свою карьеру я пропустил более 9000 бросков, проиграл почти 300 игр. 26 раз мне доверяли сделать финальный победный бросок, и я промахивался. Я терпел поражения снова, и снова, и снова. И именно поэтому я добился успеха.",
+    "quoteAuthor": "Майкл Джордан",
+    "sourceNumber": 128,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Успех — это умение двигаться от неудачи к неудаче, не теряя энтузиазма.",
+    "quoteAuthor": "Уинстон Черчилль",
+    "sourceNumber": 129,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Успех не является ключом к счастью. Счастье же — самый важный ключ к успеху. Если Вам нравится то, чем Вы занимаетесь — Вы обязательно добьетесь успеха.",
+    "quoteAuthor": "Альберт Швейцер",
+    "sourceNumber": 130,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Многие из тех, кто терпит неудачу в жизни, — это люди, которые не осознавали, насколько они были близки к успеху, когда они сдались.",
+    "quoteAuthor": "Томас Эдисон",
+    "sourceNumber": 131,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Успех не состоит в том, чтобы никогда не совершать грубых ошибок, но никогда не повторять одно и то же во второй раз.",
+    "quoteAuthor": "Джордж Бернард Шоу",
+    "sourceNumber": 132,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Успех — это сумма мелких усилий, повторяющихся день за днем.",
+    "quoteAuthor": "Роберт Кольер",
+    "sourceNumber": 133,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Успех не приходит к вам. Это вы идете к нему.",
+    "quoteAuthor": "Марва Коллинз",
+    "sourceNumber": 134,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Если вы хотите в чем-то преуспеть, стоит искать новые пути, а не идти проторенными путями уже кем-то достигнутого успеха",
+    "quoteAuthor": "",
+    "sourceNumber": 135,
+    "attributionStatus": "not_provided"
+  },
+  {
+    "quoteText": "Образование поможет выжить.",
+    "quoteAuthor": "",
+    "sourceNumber": 136,
+    "attributionStatus": "not_provided"
+  },
+  {
+    "quoteText": "Успех обычно приходит к тем, кто слишком занят, чтобы искать его.",
+    "quoteAuthor": "Генри Дэвид Торо",
+    "sourceNumber": 137,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Успех — это лестница, на которую не взобраться, держа руки в карманах.",
+    "quoteAuthor": "Зиг Зиглар",
+    "sourceNumber": 139,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Я понял, что успех должен измеряться не столько положением, которого человек достиг в своей жизни, сколько теми препятствиями, которые ему пришлось преодолеть на пути к успеху.",
+    "quoteAuthor": "Букер Тальяферро Вашингтон",
+    "sourceNumber": 140,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "В жизни нет большего удовольствия, чем удовольствие от преодоления трудностей на пути к успеху.",
+    "quoteAuthor": "Сэмюэл Джонсон",
+    "sourceNumber": 141,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Для того, чтобы преуспеть, мы первым делом должны верить, что мы можем.",
+    "quoteAuthor": "Никос Казантзакис",
+    "sourceNumber": 142,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Я не знаю ключ к успеху, но ключ к провалу — пытаться понравиться всем",
+    "quoteAuthor": "",
+    "sourceNumber": 143,
+    "attributionStatus": "not_provided"
+  },
+  {
+    "quoteText": "Когда одна дверь счастья закрывается, открывается другая; но мы часто не замечаем ее, уставившись взглядом в закрытую дверь.",
+    "quoteAuthor": "Хелен Адамс Келлер",
+    "sourceNumber": 144,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Цели — это топливо в печи достижений.",
+    "quoteAuthor": "",
+    "sourceNumber": 145,
+    "attributionStatus": "not_provided"
+  },
+  {
+    "quoteText": "То, что вы получаете, достигая своих целей, не так важно, как то, кем вы становитесь.",
+    "quoteAuthor": "Зиг Зиглар",
+    "sourceNumber": 146,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Дисциплина — это решение делать то, чего очень не хочется делать, чтобы достичь того, чего очень хочется.",
+    "quoteAuthor": "Джон Максвелл",
+    "sourceNumber": 147,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Берегите свои видения и мечты, поскольку они — детища вашей души, чертежи ваших высших достижений.",
+    "quoteAuthor": "Наполеон Хилл",
+    "sourceNumber": 148,
+    "attributionStatus": "unverified"
+  },
+  {
+    "quoteText": "Оставаться собой в мире, который постоянно пытается сделать вас чем-нибудь другим, — величайшее достижение.",
+    "quoteAuthor": "Ральф Уолдо Эмерсон",
+    "sourceNumber": 150,
+    "attributionStatus": "unverified"
+  }
+]

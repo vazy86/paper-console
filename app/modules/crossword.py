@@ -15,6 +15,30 @@ DEFAULT_NUM_WORDS = 10
 MIN_NUM_WORDS = 3
 MAX_NUM_WORDS = 18
 
+TEXT = {
+    'en': {
+        'title': 'CROSSWORD', 'level': 'Level', 'across': 'ACROSS', 'down': 'DOWN',
+        'answers': 'ANSWERS', 'hidden': 'Solution hidden below...',
+        'load_error': 'Error: Could not load word list.',
+        'empty': 'Error: Word list is empty.', 'layout_error': 'Could not generate a puzzle layout.',
+        'Easy': 'Easy', 'Medium': 'Medium', 'Hard': 'Hard',
+        'across_short': 'A', 'down_short': 'D',
+    },
+    'ru': {
+        'title': 'КРОССВОРД', 'level': 'Уровень', 'across': 'ПО ГОРИЗОНТАЛИ', 'down': 'ПО ВЕРТИКАЛИ',
+        'answers': 'ОТВЕТЫ', 'hidden': 'Ответы ниже...',
+        'load_error': 'Не удалось загрузить словарь.',
+        'empty': 'Словарь пуст.', 'layout_error': 'Не удалось построить сетку.',
+        'Easy': 'Лёгкий', 'Medium': 'Средний', 'Hard': 'Сложный',
+        'across_short': 'Г', 'down_short': 'В',
+    },
+}
+
+
+def normalize_answer(word: str, language: str) -> str:
+    word = word.strip().upper()
+    return word.replace('Ё', 'Е') if language == 'ru' else word
+
 
 def _clamp_num_words(value: Any) -> int:
     try:
@@ -324,6 +348,13 @@ def render_crossword_grid(generator: CrosswordGenerator, cell_size: int, font_pa
     config_schema={
         "type": "object",
         "properties": {
+            "language": {
+                "type": "string",
+                "title": "Language / Язык",
+                "enum": ["en", "ru"],
+                "default": "en",
+                "description": "en — English; ru — Русский (Ё = Е)",
+            },
             "num_words": {
                 "type": "integer",
                 "title": "Number of Words",
@@ -344,6 +375,12 @@ def execute_crossword(printer, config: Dict[str, Any], module_name: str = None):
     """Module entry point."""
     num_words = _clamp_num_words(config.get("num_words", DEFAULT_NUM_WORDS))
     difficulty = config.get("difficulty", "Easy")
+    if difficulty not in ('Easy', 'Medium', 'Hard'):
+        difficulty = 'Easy'
+    language = config.get('language', 'en')
+    if language not in TEXT:
+        language = 'en'
+    text = TEXT[language]
     
     # Calculate dynamic block size to fill the paper width (384 dots)
     printer_width = getattr(printer, "PRINTER_WIDTH_DOTS", 384)
@@ -351,17 +388,21 @@ def execute_crossword(printer, config: Dict[str, Any], module_name: str = None):
     
     # 1. Load word list
     app_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    csv_path = os.path.join(app_dir, "data", "crossword_words.csv")
+    filename = 'crossword_words_ru.csv' if language == 'ru' else 'crossword_words.csv'
+    csv_path = os.path.join(app_dir, "data", filename)
     
     easy_pool = []
     hard_pool = []
+    seen = set()
     try:
         with open(csv_path, 'r', encoding='utf-8') as f:
             reader = csv.DictReader(f)
             for row in reader:
-                w = row['word'].strip().upper()
+                w = normalize_answer(row['word'], language)
                 h = row['hint'].strip()
-                if w and h and w.isalpha() and 2 <= len(w) <= (GRID_WIDTH * 3):
+                valid_letters = all('А' <= c <= 'Я' for c in w) if language == 'ru' else w.isalpha()
+                if w and h and valid_letters and w not in seen and 2 <= len(w) <= (GRID_WIDTH * 3):
+                    seen.add(w)
                     d = row.get('difficulty', 'easy').strip().lower()
                     if d == 'hard':
                         hard_pool.append((w, h))
@@ -369,8 +410,8 @@ def execute_crossword(printer, config: Dict[str, Any], module_name: str = None):
                         easy_pool.append((w, h))
     except Exception as e:
         logger.error(f"Failed to load crossword words: {e}")
-        printer.print_header(module_name or "CROSSWORD", icon="grid-nine")
-        printer.print_body("Error: Could not load word list.")
+        printer.print_header(module_name or text['title'], icon="grid-nine")
+        printer.print_body(text['load_error'])
         return
     
     # 2. Select words based on difficulty
@@ -385,8 +426,8 @@ def execute_crossword(printer, config: Dict[str, Any], module_name: str = None):
         word_pool = random.sample(easy_pool, sample_size) + random.sample(hard_pool, sample_size)
 
     if not word_pool:
-        printer.print_header(module_name or "CROSSWORD", icon="grid-nine")
-        printer.print_body("Error: Word list is empty.")
+        printer.print_header(module_name or text['title'], icon="grid-nine")
+        printer.print_body(text['empty'])
         return
 
     # 3. Generate Puzzle
@@ -395,14 +436,19 @@ def execute_crossword(printer, config: Dict[str, Any], module_name: str = None):
     gen.generate(list(word_pool), num_words)
     
     if not gen.words_placed:
-        printer.print_header(module_name or "CROSSWORD", icon="grid-nine")
-        printer.print_body("Could not generate a puzzle layout.")
+        printer.print_header(module_name or text['title'], icon="grid-nine")
+        printer.print_body(text['layout_error'])
         return
 
     # 4. Print Header
-    printer.print_header(module_name or "CROSSWORD", icon="grid-nine")
-    printer.print_caption(format_print_datetime())
-    printer.print_subheader(f"Level: {difficulty}")
+    printer.print_header(module_name or text['title'], icon="grid-nine")
+    printer.print_caption(
+        format_print_datetime(time_format='24h', date_format='%d.%m.%Y')
+        if language == 'ru' else format_print_datetime()
+    )
+    printer.print_subheader(f"{text['level']}: {text[difficulty]}")
+    if language == 'ru':
+        printer.print_caption('В ответах Ё = Е; Г — горизонталь, В — вертикаль.')
     printer.feed(1)
 
     # 5. Print Grid
@@ -423,26 +469,27 @@ def execute_crossword(printer, config: Dict[str, Any], module_name: str = None):
     down = [w for w in gen.words_placed if w['dir'] == "down"]
 
     if across:
-        printer.print_bold("ACROSS")
+        printer.print_bold(text['across'])
         for clue in sorted(across, key=lambda x: x['num']):
             printer.print_body(f"{clue['num']}. {clue['hint']}")
         printer.feed(1)
 
     if down:
-        printer.print_bold("DOWN")
+        printer.print_bold(text['down'])
         for clue in sorted(down, key=lambda x: x['num']):
             printer.print_body(f"{clue['num']}. {clue['hint']}")
         printer.feed(1)
 
     # 7. Print Answer Key
     printer.print_line()
-    printer.print_caption("Solution hidden below...")
+    printer.print_caption(text['hidden'])
     printer.feed(10)
     
     # Compact answer string
     answers = []
     for clue in sorted(gen.words_placed, key=lambda x: x['num']):
-        answers.append(f"{clue['num']}{clue['dir'][0].upper()}:{clue['word']}")
+        direction = text['across_short'] if clue['dir'] == 'across' else text['down_short']
+        answers.append(f"{clue['num']}{direction}:{clue['word']}")
     
-    printer.print_caption("ANSWERS: " + ", ".join(answers))
+    printer.print_caption(text['answers'] + ": " + ", ".join(answers))
     printer.feed(1)

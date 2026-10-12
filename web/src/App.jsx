@@ -346,7 +346,7 @@ function App() {
       email: { email_host: 'imap.gmail.com', email_user: '', email_password: '', polling_interval: 60 },
       sudoku: { difficulty: 'Medium' },
       crossword: { num_words: 10, difficulty: 'Easy' },
-      wordsearch: { num_words: 15, difficulty: 'Easy' },
+      wordsearch: { num_words: 15, difficulty: 'Easy', language: 'en' },
       astronomy: {},
       calendar: { ical_sources: [], view_mode: 'month' },
       webhook: {
